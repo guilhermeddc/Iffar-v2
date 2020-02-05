@@ -9,6 +9,7 @@ import 'package:flutter_app/pages/ProgramDPE/ProgramDPE.dart';
 import 'package:flutter_app/pages/Records/Records.dart';
 import 'package:flutter_app/pages/Regulation/Regulation.dart';
 import 'package:flutter_app/pages/System/System.dart';
+import 'package:flutter_app/widgets/DrawerIffar.dart';
 import 'package:flutter_app/widgets/IntroButton.dart';
 import 'package:flutter_app/widgets/TitleScreen.dart';
 import 'package:flutter_app/pages/UsefulLinks/UsefulLinks.dart';
@@ -29,6 +30,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('CAE na rede'),
       ),
+      drawer: DrawerIffar(),
       body: ListView(
         children: <Widget>[
           Container(

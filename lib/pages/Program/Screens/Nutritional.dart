@@ -3,7 +3,6 @@ import 'package:flutter_app/widgets/ImageScreen.dart';
 import 'package:flutter_app/widgets/ItemList.dart';
 import 'package:flutter_app/widgets/LinkButton.dart';
 import 'package:flutter_app/widgets/SubTitleList.dart';
-import 'package:flutter_app/widgets/TitleList.dart';
 import 'package:flutter_app/widgets/TitleScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
