@@ -26,7 +26,10 @@ class IntroButton extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Icon(icon),
+            Icon(
+              icon,
+              size: size.width / 15,
+            ),
             SizedBox(
               height: size.width / 50,
             ),
@@ -34,7 +37,7 @@ class IntroButton extends StatelessWidget {
               text,
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: size.width /46,
+                fontSize: size.width /36,
               ),
             ),
           ],

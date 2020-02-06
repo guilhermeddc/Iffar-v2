@@ -11,6 +11,7 @@ import 'package:flutter_app/pages/Regulation/Regulation.dart';
 import 'package:flutter_app/pages/System/System.dart';
 import 'package:flutter_app/widgets/DrawerIffar.dart';
 import 'package:flutter_app/widgets/IntroButton.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_app/widgets/TitleScreen.dart';
 import 'package:flutter_app/pages/UsefulLinks/UsefulLinks.dart';
 
@@ -29,6 +30,19 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('CAE na rede'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.thumbs_up_down),
+            onPressed: () async {
+              var url = "https://forms.gle/czvbhu3RZYHty1Zk8";
+              if (await canLaunch(url)) {
+                await launch(url);
+              } else {
+                throw 'Could not launch $url';
+              }
+            },
+          )
+        ],
       ),
       drawer: DrawerIffar(),
       body: ListView(
@@ -48,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[
                       IntroButton(
                         Colors.red,
-                        Icons.account_balance,
+                        Icons.home,
                         'Conhecendo IFFar',
                         100,
                         KnowingPage(),
@@ -62,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       IntroButton(
                         Colors.green,
-                        Icons.gavel,
+                        Icons.border_color,
                         "Regulamentos",
                         10,
                         Regulation(),
@@ -77,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[
                       IntroButton(
                         Colors.green,
-                        Icons.poll,
+                        Icons.fingerprint,
                         "Políticas",
                         10,
                         Politics(),
@@ -104,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                     children: <Widget>[
                       IntroButton(
                         Colors.green,
-                        Icons.sync,
+                        Icons.group_add,
                         "Permanência e Êxito",
                         10,
                         ProgramDPE(),
@@ -118,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       IntroButton(
                         Colors.green,
-                        Icons.border_color,
+                        Icons.school,
                         "Registro Acadêmico",
                         10,
                         Records(),
